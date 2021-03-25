@@ -23,9 +23,14 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
+        .target(name: "GeoFire",
+                dependencies: [.product(name: "FirebaseDatabase", package: "Firebase")],
+                cSettings: [
+                   .headerSearchPath("include"), // 5
+                ]),
         .target(
             name: "GeoFireStore",
-            dependencies: [.product(name: "FirebaseFirestore", package: "Firebase")]),
+            dependencies: [.product(name: "FirebaseFirestore", package: "Firebase"), "GeoFire"]),
         .testTarget(
             name: "GeoFireStoreTests",
             dependencies: ["GeoFireStore"]),

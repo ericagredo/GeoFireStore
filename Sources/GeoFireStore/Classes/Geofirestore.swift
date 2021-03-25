@@ -4,6 +4,7 @@ import FirebaseCore
 import FirebaseFirestore
 import GeoFire
 
+
 public extension GeoPoint {
     class func geopointWithLocation(location: CLLocation) -> GeoPoint {
         return GeoPoint(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
