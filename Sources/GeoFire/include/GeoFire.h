@@ -29,10 +29,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-
+#import "GFGeoHashQuery.h"
 #import "GFQuery.h"
 #import "GFCircleQuery.h"
 #import "GFRegionQuery.h"
+
 
 @class FIRDatabaseReference;
 
